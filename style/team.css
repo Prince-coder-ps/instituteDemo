@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ..... Header ..... */
+header {
+    display: block;
+    background-image: url(/image/teamBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-size: cover;
+    height: 626px;
+    width: 100%
+}
+#navbar {
+    height: 50px;
+    width: 100%;
+    /* border: 2px solid red; */
+    background: linear-gradient(to left, #156ae1, #1c1cd6);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+#menu {
+    /* border: 2px solid aqua; */
+    display: flex;
+    margin: auto 0px;
+}
+
+#menu li {
+    /* border: 2px solid black; */
+    list-style: none;
+    margin: 1vw;
+}
+
+#menu li a {
+    text-decoration: none;
+    padding: 8px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition:0.3s;
+}
+#menu li a:hover{
+    background:rgba(255, 255, 255, 0.5) ;
+    border-radius: 5px;
+}
+
+#logo img {
+    /* display: flex; */
+    height: 45px;
+    margin: 2px;
+    align-items: center;
+    /* inline-size: 57.25px; */
+}
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+/* MENU ICON */
+.menu-icon {
+    /* border: 2px solid red; */
+    width: 40px;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    display: none;
+    margin: 2vw;
+}
+
+.menu-icon:hover{
+    border-radius: 5px;
+    color: white;
+}
+.menu-icon:active{
+    color: aquamarine;
+}
+#headerText{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Responsive Navbar */
+@media (max-width: 523px) {
+
+    /* Hide menu by default */
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: transparent;
+        backdrop-filter: blur(25px);
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Checkbox Hack - Show menu when checked */
+    #menu-toggle:checked+.menu-icon+#menu {
+        display: flex;
+    }
+
+    header {
+        height: 550px;
+    }
+}
+.preSection-heading{
+    text-align: center;
+    margin-top: 50px;
+    background: linear-gradient(to left, #156ae1, #1c1cd6);
+    height: 50px;
+    /* align-items: center; */
+    /* margin: 0 auto; */
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.sliderSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.slider-container {
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #78dfdf3d;
+    backdrop-filter: blur(30px);
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(18, 247, 255, 0.7);
+    transition:0.3s ease ;
+}
+.swiper-slide:hover{
+    border: 2px solid aquamarine;
+    box-shadow: 5px 5px 8px hsl(185, 86%, 58%);
+
+}
+.faculty-img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.faculty-profession {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 14px 0px 1px 0px;
+}
+#result-section{
+    margin: 102px 0px;
+}
+/* Footer */
+#footercontainer{
+    margin-top: 65px;
+    background:linear-gradient(to left, #156ae1, #1c1cd6) ;
+    overflow: hidden;
+}
+#footercontainer div{
+    height: auto;
+    background-color: #abddddf5;
+    border-radius: 32px;
+    border: 2px solid black;
+    margin: 62px 62px 48px 62px;
+    text-align: center;
+}
+#footercontainer div p{
+    margin: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#footercontainer div hr{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+}
+.icon{
+    font-size: 25px;
+    color: #000000
+}

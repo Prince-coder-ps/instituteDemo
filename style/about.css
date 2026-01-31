@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+header{
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 12px
+}
+#navbar {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to left, #156ae1, #1c1cd6);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+#menu {
+    /* border: 2px solid aqua; */
+    display: flex;
+    margin: auto 0px;
+}
+
+#menu li {
+    /* border: 2px solid black; */
+    list-style: none;
+    margin: 1vw;
+}
+
+#menu li a {
+    text-decoration: none;
+    padding: 8px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition:0.3s;
+}
+#menu li a:hover{
+    background:rgba(255, 255, 255, 0.5) ;
+    border-radius: 5px;
+}
+
+#logo img {
+    display: flex;
+    height: 45px;
+    margin: 2px;
+    align-items: center;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+/* MENU ICON */
+.menu-icon {
+    /* border: 2px solid red; */
+    width: 40px;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    display: none;
+    margin: 2vw;
+}
+
+.menu-icon:hover{
+    border-radius: 5px;
+    color: white;
+}
+.menu-icon:active{
+    color: aquamarine;
+}
+
+/* Responsive Navbar */
+@media (max-width: 523px) {
+
+    /* Hide menu by default */
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: transparent;
+        backdrop-filter: blur(25px);
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Checkbox Hack - Show menu when checked */
+    #menu-toggle:checked+.menu-icon+#menu {
+        display: flex;
+    }
+}
+main{
+    margin-top: 50px;
+}
+#aboutSummury h2,h3,p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    margin: 2px;
+    padding: 11px;
+}
+#aboutSummury h2{
+    color: #040480;
+}
+#aboutSummury div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+}
+.container{
+    width: 563px;
+    height: 422px;
+    padding: 3px;
+    margin: 10px;
+    background-color: #78dfdf3d;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+.container ul{
+    margin: 28px 15px;
+}
+.container ul li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    margin: 20px;
+}
+section{
+    margin-top: 42px;
+    width: 100%;
+    /* border: 2px solid black; */
+    overflow-x: hidden;
+
+}
+#features h2{
+    /* border: 2px dashed tomato; */
+    height: 43px;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to left, #156ae1, #1c1cd6);
+}
+#aboutFeatures{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap:wrap-reverse;
+    gap: 20px;
+}
+#aboutFeatures div{
+    /* border: 2px solid green; */
+    /* flex: 1; */
+    height: auto; 
+    margin: 69px;    
+}
+#aboutFeatures div h2{
+    /* border: 2px dashed grey; */
+    color: #040480;
+    background: transparent;
+}
+#aboutFeatures div img{
+    max-width: 90%;
+    height: 500px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+#featuresImg{
+    background-color: white;
+    text-align: center;
+    opacity: 0.9;
+}
+#sec3 h2{
+    height: 43px;
+    padding-top: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to left, #156ae1, #1c1cd6);
+}
+#location{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#location div{
+    height: auto;
+    margin: 69px 69px 10px 69px;
+    text-align: center;
+}
+#location div img{
+    max-width: 70%;
+    height: 282px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px rgb(67, 219, 230));
+    background-color: transparent;
+    margin: 18px auto;
+}
+.container p span{
+    color: goldenrod;
+    font-size: large;
+    font-weight: 800;
+}
+#footercontainer{
+    margin-top: 42px;
+    /* border: 2px solid tomato; */
+    background:linear-gradient(to left, #156ae1, #1c1cd6) ;
+    overflow: hidden;
+}
+#footercontainer div{
+    height: auto;
+    background-color: #abddddf5;
+    border-radius: 32px;
+    border: 2px solid black;
+    margin: 62px 62px 48px 62px;
+    text-align: center;
+}
+#footercontainer div hr{
+    width: 20%;
+    position: absolute;
+    left: 40%;
+}
+.icon{
+    font-size: 25px;
+    color: #000000
+}
+
